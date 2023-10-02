@@ -1,12 +1,12 @@
 name: ci-app-test
 on: push
 jobs:
-	build:
-		runs-on: macos-latest
-		steps:
-		- uses: actions/checkout@v3
-		- uses: actions/setup-node@v3	
-		- run: make setup
-		- run: make test
-		- name: run linter
-		run: make lint
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3	
+      - run: make setup
+      - run: make test
+      - name: run linter
+        run: make lint
