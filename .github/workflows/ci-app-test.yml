@@ -1,9 +1,9 @@
 name: ci-app-test
 on: push
 jobs:
-  env:
-    SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
   build:
+    env:
+      SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
